@@ -3,19 +3,22 @@
     {
       "metric": "statistics.visualMetrics.LastVisualChange",
       "max": 10000,
-      "message": "too slow!"
+      "message": "too slow!",
+      "unit": "ms"
     },
     {
       "metric": "statistics.visualMetrics.FirstVisualChange",
       "max": 1000,
-      "message": "way too slow!"
+      "message": "way too slow!",
+      "unit": "ms"
     }
   ],
   "coach.pageSummary": [
     {
       "metric": "advice.performance.score",
       "min": 75,
-      "message": "Not fast enough!"
+      "message": "Not fast enough!",
+      "unit": "percentage"
     }
   ]
 }
