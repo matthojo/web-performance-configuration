@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Web Performance budget",
+  "type": "object",
+  "patternProperties": {
+    "[a-z.]+": {
+      "description": "A set of rules, identified by a rule set context",
+      "type": "array",
+      "items": {
+        "description": "A rule, matching a metric to a budget criteria",
+        "type": "object",
+        "properties": {
+          "metric": {
+            "description": "The name of a metric",
+            "type": "string"
+          },
+          "min": {
+            "description": "Metric lower budget limit",
+            "type": "integer"
+          },
+          "max": {
+            "description": "Metric upper budget limit",
+            "type": "integer"
+          },
+          "message": {
+            "description": "Message if budget rule is broken",
+            "type": "string"
+          }
+        },
+        "required": [
+          "metric",
+          "message"
+        ]
+      }
+    }
+  }
+}

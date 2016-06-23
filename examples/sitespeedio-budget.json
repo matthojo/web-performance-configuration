@@ -1,0 +1,21 @@
+{
+  "browsertime.pageSummary": [
+    {
+      "metric": "statistics.visualMetrics.LastVisualChange",
+      "max": 10000,
+      "message": "too slow!"
+    },
+    {
+      "metric": "statistics.visualMetrics.FirstVisualChange",
+      "max": 1000,
+      "message": "way too slow!"
+    }
+  ],
+  "coach.pageSummary": [
+    {
+      "metric": "advice.performance.score",
+      "min": 75,
+      "message": "Not fast enough!"
+    }
+  ]
+}
