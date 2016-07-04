@@ -2,6 +2,13 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Web Performance budget",
   "type": "object",
+  "definitions": {
+  	"unit": {
+      "description": "Valid result units",
+      "type": "string",
+      "enum": [ "bytes", "ms", "number", "percentage" ]
+   	}
+  },
   "patternProperties": {
     "[a-z.]+": {
       "description": "A set of rules, identified by a rule set context",
@@ -25,11 +32,16 @@
           "message": {
             "description": "Message if budget rule is broken",
             "type": "string"
+          },
+          "unit": {
+            "description": "The unit the metric is in",
+            "$ref": "#/definitions/unit"
           }
         },
         "required": [
           "metric",
-          "message"
+          "message",
+          "unit"
         ]
       }
     }
