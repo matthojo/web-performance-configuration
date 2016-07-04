@@ -7,7 +7,15 @@
       "description": "Valid result units",
       "type": "string",
       "enum": [ "bytes", "ms", "number", "percentage" ]
-   	}
+   	},
+    "log-level": {
+      "description": "Valid log statuses",
+      "type": "string",
+      "enum": [
+        "warn",
+        "error"
+      ]
+    }
   },
   "patternProperties": {
     "[a-z.]+": {
@@ -36,6 +44,10 @@
           "unit": {
             "description": "The unit the metric is in",
             "$ref": "#/definitions/unit"
+          },
+          "severity": {
+            "description": "The severity of the metric if it were to fail a check",
+            "$ref": "#/definitions/log-level"
           }
         },
         "required": [
