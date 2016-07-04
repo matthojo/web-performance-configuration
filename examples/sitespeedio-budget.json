@@ -4,13 +4,15 @@
       "metric": "statistics.visualMetrics.LastVisualChange",
       "max": 10000,
       "message": "too slow!",
-      "unit": "ms"
+      "unit": "ms",
+      "severity": "warn"
     },
     {
       "metric": "statistics.visualMetrics.FirstVisualChange",
       "max": 1000,
       "message": "way too slow!",
-      "unit": "ms"
+      "unit": "ms",
+      "severity": "error"
     }
   ],
   "coach.pageSummary": [
